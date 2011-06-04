@@ -43,13 +43,45 @@
 
 // note definitions
 // (1,000,000 Hz / note frequency / 2)
-#define MIDDLE_A 1136
+#define G3 2551
+// TODO
+#define C4 1911
+#define Cs4 1804
+#define Db4 1804
+#define D4 1703
+#define Ds4 1607
+#define Eb4 1607
+#define E4 1517
+#define F4 1432
+#define Fs4 1351
+#define Gb4 1351
+#define G4 1276
+#define Gs4 1204
+#define Ab4 1204
+#define A4 1136
+#define As4 1073
+#define Bb4 1073
+#define B4 1012
+#define C5 956
+#define Cs5 902
+#define Db5 902
+#define D5 851
+#define Ds5 804
+#define Eb5 804
+#define E5 758
+#define F5 716
+#define Fs5 676
+#define Gb5 676
+#define G5 638
+#define Gs5 602
+#define Ab5 602
+#define A5 568
 
 // turns the sound output on or off
 volatile unsigned int sound_enabled = 0;
 
 // keeps track of the current note we're playing
-volatile unsigned int current_note = MIDDLE_A;
+volatile unsigned int current_note = A4;
 
 // keeps track of the number of ms elapsed
 volatile unsigned int ms_elapsed = 0;
@@ -161,6 +193,53 @@ interrupt(TIMERA1_VECTOR) timer_elapsed_isr() {
     }
 }
 
+// bob-omb battlefield theme from super mario 64
+void super_mario_64() {
+    // measure 1
+    play(C5, 2);
+    play(A4, 2);
+    play(C5, 2);
+    play(D5, 1);
+    play(C5, 1);
+    rest(1);
+    play(E4, 3);
+    play(F4, 2);
+    play(Fs4, 2);
+
+    // measure 2
+    play(G4, 3);
+    rest(1);
+    play(G4, 1);
+    play(G3, 2);
+    play(G4, 2);
+    rest(5);
+    play(D5, 1);
+    play(Eb5, 1);
+
+    // measure 3
+    play(E5, 1);
+    play(Eb5, 1);
+    play(E5, 1);
+    play(G5, 2);
+    play(A5, 1);
+    play(G5, 2);
+    play(C5, 4);
+    rest(2);
+    play(G4, 1);
+    play(Ab4, 1);
+    
+    // measure 4
+    play(A4, 1);
+    play(Ab4, 1);
+    play(A4, 1);
+    play(C5, 2);
+    play(D5, 1);
+    play(C5, 2);
+    play(A4, 4);
+    rest(2);
+    play(A4, 2);
+}
+
 int main() {
     // initialize the system
     init();
@@ -176,25 +255,10 @@ int main() {
         LED_OUT &= ~LED_RED;
 
         // set the bpm
-        set_bpm(120);
+        set_bpm(110);
 
         // play the song!
-        play(MIDDLE_A, 1);
-        play(MIDDLE_A, 1);
-        rest(1);
-        play(MIDDLE_A, 1);
-        play(MIDDLE_A, 1);
-        rest(1);
-        play(MIDDLE_A, 1);
-        play(MIDDLE_A, 1);
-        rest(1);
-        play(MIDDLE_A, 1);
-        play(MIDDLE_A, 1);
-        rest(1);
-        play(MIDDLE_A, 1);
-        rest(1);
-        play(MIDDLE_A, 1);
-        rest(1);
+        super_mario_64();
     }
     
     return 0;

@@ -1,3 +1,12 @@
+// Bob Somers 2011
+//     http://bobsomers.com
+//
+// Made for the TI MSP430 LaunchPad
+//     http://ti.com/launchpadwiki
+//
+// Released under the Beerware License
+//     http://en.wikipedia.org/wiki/Beerware
+
 #include <io.h>
 #include <signal.h>
 
@@ -22,11 +31,12 @@
 #define DEAD_TIME_MS 20
 
 // assuming 4/4 time, this is how many ticks we subdivide the beat into, so
-// in other words, 4 ticks per beat gives us sixteenth note resolution
+// in other words, 4 ticks per beat gives us 16th note resolution
+// we then define all note duration in lengths of 16th note "ticks"
 #define TICKS_PER_BEAT 4
 
 // note definitions
-// (1,000,000 Hz / <note frequency> / 2)
+// (1,000,000 Hz / note frequency / 2)
 #define MIDDLE_A 1136
 
 // turns the sound output on or off

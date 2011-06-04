@@ -6,6 +6,12 @@
 //
 // Released under the Beerware License
 //     http://en.wikipedia.org/wiki/Beerware
+//
+// NOTE: I wrote this using MSPGCC on Linux. I'm pretty sure I used some
+// defines that are MSPGCC-only (i.e. not defined in the TI Windows
+// software tools). I don't really want to bother with installing it and
+// figuring out what needs to change, so free internet cookies to the
+// first person who submits a patch that makes it work in both.
 
 #include <io.h>
 #include <signal.h>

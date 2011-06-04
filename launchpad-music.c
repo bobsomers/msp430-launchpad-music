@@ -105,7 +105,6 @@ void init() {
 
     // initialize speaker (output)
     SPEAKER_DIR |= SPEAKER;
-    SPEAKER_OUT &= ~SPEAKER;
     
     // initialize the timer
     TACTL |= TASSEL_SMCLK | ID_DIV1 | MC_CONT | TAIE;

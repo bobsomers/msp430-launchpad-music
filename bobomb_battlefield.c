@@ -15,7 +15,7 @@ void song_setup()
 	set_bpm(110);
 }
 
-void play_song() {
+void song_play() {
 	// measure 1
 	play(C5, 2);
 	play(A4, 2);

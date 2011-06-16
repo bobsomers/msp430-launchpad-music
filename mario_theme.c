@@ -194,7 +194,7 @@ void mario_theme_measure_11()
 	
 }*/
 
-void play_song()
+void song_play()
 {
 	
 	mario_theme_measure_1();

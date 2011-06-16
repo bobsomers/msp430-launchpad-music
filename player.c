@@ -149,7 +149,7 @@ int main() {
 		//Both of these functions have to be implemented in the song source,
 		//which is loaded just before the main. 
 		song_setup();
-		play_song();
+		song_play();
     }
     
     return 0;

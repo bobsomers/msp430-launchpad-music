@@ -13,6 +13,8 @@
 // figuring out what needs to change, so free internet cookies to the
 // first person who submits a patch that makes it work in both.
 
+//Mario theme added by Sergio Campam‡, 2011 <kaipi.me>
+
 #include <io.h>
 #include <signal.h>
 

@@ -8,6 +8,10 @@
  * Princess Slide Theme from Super Mario 64
  */
 
+/*
+ * ALL SONGS MUST IMPLEMENT song_setup() AND song_play()!
+ */
+
 void song_setup() {
     set_bpm(180);
 }

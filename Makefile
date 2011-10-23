@@ -1,12 +1,12 @@
 CC = msp430-gcc
 CFLAGS = -Os -Wall -g -mmcu=msp430x2012
 
-BIN = player.elf
-OBJS = player.o
+BIN = msp430-music.elf
+OBJS = music.o player.o
 
-all: launchpad-player 
+all: msp430-music 
 
-launchpad-player: $(OBJS)
+msp430-music: $(OBJS)
 	$(CC) $(CFLAGS) -o $(BIN) $(OBJS)
 
 %.o: %.c

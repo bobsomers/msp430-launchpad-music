@@ -27,11 +27,11 @@ I'm pretty sure I used some MSPGCC-only defines in this code, so free internet
 cookies to the first person who submits a patch that makes this work in TI's
 Windows software, too.
 
-*****As of 2011-10-23, this has been updated for MSPGCC's new "Uniarch", and
+***As of 2011-10-23, this has been updated for MSPGCC's new "Uniarch", and
 has been tested with version 4.5.3. If you're using an older version, you may
 need to replace `<msp430.h>` with `<io.h>` and `<signal.h>`. I'm really not
 100% sure, because I don't have an older version around to test with. As above,
-patches are appreciated and receive free internet cookies.*****
+patches are appreciated and receive free internet cookies.***
 
 Released under the [Beerware License](http://en.wikipedia.org/wiki/Beerware).
 That means you can do whatever the heck you want with it. If you find it useful
